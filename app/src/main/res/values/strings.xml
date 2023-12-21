@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">XKatrina</string>
+    <string name="room_parameters">Параметры комнаты</string>
+    <string name="width_surface">Ширина поверхности</string>
+    <string name="height_surface">Высота (длина) поверхности</string>
+    <string name="paint_parameters">Параметры краски</string>
+    <string name="paint_consumption">Расход краски кв.м./л.</string>
+    <string name="layer_count">Количество слоев</string>
+    <string name="paint_volume">Объем банки</string>
+    <string name="reserve">Запас</string>
+    <string name="reserve_10_percent">10% запаса</string>
+    <string name="reserve_15_percent">15% запаса</string>
+    <string name="no_reserve">Без запаса</string>
+    <string name="calculate_button">Рассчитать</string>
+</resources>

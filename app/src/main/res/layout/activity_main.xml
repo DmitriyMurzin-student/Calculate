@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:id="@+id/roomParamsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+
+        <TextView
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="20dp"
+            android:text="@string/room_parameters"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="15dp"
+            android:text="@string/width_surface"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextWidth"
+                style="@style/editTextViewAll"
+                android:layout_width="292dp"
+                android:hint="5"
+                android:inputType="numberDecimal" />
+            <EditText
+                android:layout_width="48dp"
+                style="@style/editTextViewAll"
+                android:backgroundTint="@color/lightGray"
+                android:hint="м"
+                android:inputType="none"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="3dp"
+            android:text="@string/height_surface" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="292dp"
+                style="@style/editTextViewAll"
+                android:hint="4"
+                android:inputType="numberDecimal"
+                android:id="@+id/editTextHeight"
+                tools:ignore="TouchTargetSizeCheck"/>
+            <EditText
+                android:layout_width="48dp"
+                style="@style/editTextViewAll"
+                android:hint="м"
+                android:backgroundTint="@color/lightGray"
+                android:inputType="none"
+                android:focusableInTouchMode="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/paintParamsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/roomParamsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+
+        <TextView
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="@string/paint_parameters"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif"
+            android:text="Расход краски кв.м./л."
+            android:drawablePadding="8dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="292dp"
+                style="@style/editTextViewAll"
+                android:hint="20"
+                android:inputType="numberDecimal"
+                android:id="@+id/editTextPaintConsumption"
+                tools:ignore="TouchTargetSizeCheck"/>
+            <EditText
+                android:layout_width="48dp"
+                style="@style/editTextViewAll"
+                android:hint="л³"
+                android:focusableInTouchMode="false"
+                android:backgroundTint="@color/lightGray"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif"
+            android:text="Количество слоев" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="292dp"
+                style="@style/editTextViewAll"
+                android:hint="2"
+                android:inputType="number"
+                android:id="@+id/editTextLayerCount"
+                tools:ignore="TouchTargetSizeCheck"/>
+            <EditText
+                android:layout_width="48dp"
+                style="@style/editTextViewAll"
+                android:hint="шт"
+                android:focusableInTouchMode="false"
+                android:backgroundTint="@color/lightGray"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="sans-serif"
+            android:text="Объем банки" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="292dp"
+                style="@style/editTextViewAll"
+                android:hint="3"
+                android:inputType="numberDecimal"
+                android:id="@+id/editTextPaintVolume"
+                tools:ignore="TouchTargetSizeCheck" />
+            <EditText
+                android:layout_width="48dp"
+                style="@style/editTextViewAll"
+                android:hint="л"
+                android:focusableInTouchMode="false"
+                android:backgroundTint="@color/lightGray"
+                android:inputType="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reserveLayout"
+        android:layout_width="407dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paintParamsLayout">
+
+        <TextView
+            android:layout_width="362dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="20dp"
+            android:paddingStart="17dp"
+            android:text="@string/reserve"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupReserve"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPaintVolume"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.247"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+            <RadioButton
+                android:id="@+id/radioButton10Percent"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="1dp"
+                android:text="@string/reserve_15_percent" />
+
+            <RadioButton
+                android:id="@+id/radioButton15Percent"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="1dp"
+                android:text="@string/reserve_10_percent" />
+
+            <RadioButton
+                android:id="@+id/radioButtonNoReserve"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="1dp"
+                android:text="@string/no_reserve"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:onClick="CalculateOut"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="84dp"
+        android:text="@string/calculate_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reserveLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="233dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="---------"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate"
+        app:layout_constraintVertical_bias="0.244" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
